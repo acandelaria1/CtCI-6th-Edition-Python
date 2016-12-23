@@ -1,3 +1,10 @@
+#bruteForce implementation
+def MagicIndexBrute(array):
+    for i in range(len(array)):
+        if i == array[i]:
+            return i
+    return None
+
 def MagicIndex(array, min, max):
     mid = (max + min) / 2
     if array[mid] == mid:
@@ -23,4 +30,5 @@ def FillArray():
     return array
 
 array = FillArray()
-print MagicIndex(array, 0, len(array) - 1)
+print(MagicIndexBrute(array))
+print(MagicIndex(array, 0, len(array) - 1)
